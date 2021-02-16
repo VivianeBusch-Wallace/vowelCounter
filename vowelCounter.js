@@ -18,20 +18,17 @@ console.log(
 const vowelCount = (str) => {
   const strArr = str.toLowerCase().split("");
   let counter = 0;
+  let vowelArr = ["a", "e", "i", "o", "u"];
   for (let i = 0; i < strArr.length; i++) {
-    switch (strArr[i]) {
-      case "a":
-      case "e":
-      case "i":
-      case "o":
-      case "u":
+    for (let j = 0; j < vowelArr.length; j++) {
+      if (str[i].includes(vowelArr[j])) {
         counter++;
-        break;
-      default:
+      }
     }
   }
   return counter;
 };
+
 console.log(vowelCount("hello"));
 console.log(vowelCount("test"));
 console.log(vowelCount("fbw"));
