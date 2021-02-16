@@ -1,7 +1,7 @@
 console.log(
   "-----------How many vowels does your word or sentence have?------------"
 );
-// #### 1. How many?
+// #### How many?
 // * Create a function named "_vowelCount_" that accepts a string as an argument.
 // Check how many vowels the string contains, if any.
 // Return the vowel count of the string.
@@ -18,16 +18,12 @@ console.log(
 const vowelCount = (str) => {
   const strArr = str.toLowerCase().split("");
   let counter = 0;
+  let vowelArr = ["a", "e", "i", "o", "u"];
   for (let i = 0; i < strArr.length; i++) {
-    switch (strArr[i]) {
-      case "a":
-      case "e":
-      case "i":
-      case "o":
-      case "u":
+    for (let j = 0; j < vowelArr.length; j++) {
+      if (str[i].includes(vowelArr[j])) {
         counter++;
-        break;
-      default:
+      }
     }
   }
   return counter;
