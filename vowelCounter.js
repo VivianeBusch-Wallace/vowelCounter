@@ -16,11 +16,13 @@ console.log(
 //       vowelCount("fbw") // 0
 //       ```
 const vowelCount = (str) => {
-  const strArr = str.toLowerCase().split("");
-
-  return counter;
+  let vowelArr = ["a", "e", "i", "o", "u"];
+  return str
+    .toLowerCase()
+    .split("")
+    .filter((letter) => vowelArr.includes(letter)).length;
 };
-console.log(vowelCount("hello"));
 console.log(vowelCount("test"));
-console.log(vowelCount("fbw"));
-console.log(vowelCount("wie alt bist du?"));
+console.log(vowelCount("You are beautiful."));
+console.log(vowelCount("qrstfbw4592ZTW"));
+console.log(vowelCount("abcdefghijklmnopqrstuvwxyz"));
